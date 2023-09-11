@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9CD2BEBA2AAB91D5003379D3 /* alura_viagensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2BEB92AAB91D5003379D3 /* alura_viagensApp.swift */; };
+		9CD2BEBA2AAB91D5003379D3 /* AluraViagensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2BEB92AAB91D5003379D3 /* AluraViagensApp.swift */; };
 		9CD2BEBC2AAB91D5003379D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD2BEBB2AAB91D5003379D3 /* ContentView.swift */; };
 		9CD2BEBE2AAB91D7003379D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2BEBD2AAB91D7003379D3 /* Assets.xcassets */; };
 		9CD2BEC12AAB91D7003379D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD2BEC02AAB91D7003379D3 /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		9CD2BEB62AAB91D5003379D3 /* alura-viagens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alura-viagens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CD2BEB92AAB91D5003379D3 /* alura_viagensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alura_viagensApp.swift; sourceTree = "<group>"; };
+		9CD2BEB92AAB91D5003379D3 /* AluraViagensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AluraViagensApp.swift; sourceTree = "<group>"; };
 		9CD2BEBB2AAB91D5003379D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9CD2BEBD2AAB91D7003379D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD2BEC02AAB91D7003379D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		9CD2BEB82AAB91D5003379D3 /* alura-viagens */ = {
 			isa = PBXGroup;
 			children = (
-				9CD2BEB92AAB91D5003379D3 /* alura_viagensApp.swift */,
+				9CD2BEB92AAB91D5003379D3 /* AluraViagensApp.swift */,
 				9CD2BEBB2AAB91D5003379D3 /* ContentView.swift */,
 				9CD2BEBD2AAB91D7003379D3 /* Assets.xcassets */,
 				9CD2BEBF2AAB91D7003379D3 /* Preview Content */,
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD2BEBC2AAB91D5003379D3 /* ContentView.swift in Sources */,
-				9CD2BEBA2AAB91D5003379D3 /* alura_viagensApp.swift in Sources */,
+				9CD2BEBA2AAB91D5003379D3 /* AluraViagensApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
