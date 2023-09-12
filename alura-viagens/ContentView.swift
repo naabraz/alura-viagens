@@ -47,12 +47,20 @@ struct ContentView: View {
           .offset(x: -50)
         }
         .offset(y: -35)
-        
-        List {
-          Text("Rio de Janeiro")
-          Text("Ceará")
-          Text("Atibaia")
-          Text("Pernambuco")
+
+        List (viagens) { viagem in
+          VStack(alignment: .leading) {
+            Text(viagem.titulo)
+            Image(viagem.imagem)
+              .resizable()
+              .frame(height: 125)
+            
+            HStack {
+              Text(viagem.quantidadeDeDias)
+              Spacer()
+              Text(viagem.valor)
+            }
+          }
         }
       }
     }
