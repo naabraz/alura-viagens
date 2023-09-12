@@ -30,7 +30,11 @@ struct ContentView: View {
               .foregroundColor(.white)
           }
           .frame(width: 100, height: 50)
+          .overlay(RoundedRectangle(cornerRadius: 10).stroke(.blue, lineWidth: 10))
           .background(.blue)
+          .offset(x: 50)
+          
+          Spacer()
           
           Button(action: {}) {
             Text("Pacotes")
@@ -38,8 +42,11 @@ struct ContentView: View {
               .foregroundColor(.white)
           }
           .frame(width: 100, height: 50)
+          .overlay(RoundedRectangle(cornerRadius: 10).stroke(.orange, lineWidth: 10))
           .background(.orange)
+          .offset(x: -50)
         }
+        .offset(y: -35)
         
         List {
           Text("Rio de Janeiro")
