@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct HeaderView: View {
   var body: some View {
     GeometryReader { view in
       VStack {
@@ -20,9 +20,9 @@ struct ContentView: View {
             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 30)
         }
-        .frame(width: view.size.width, height: 180, alignment: .top)
-        .background(Color.purple)
-        
+          .frame(width: view.size.width, height: 180, alignment: .top)
+          .background(Color.purple)
+          
         HStack {
           Button(action: {}) {
             Text("Hotéis")
@@ -33,9 +33,9 @@ struct ContentView: View {
           .overlay(RoundedRectangle(cornerRadius: 10).stroke(.blue, lineWidth: 10))
           .background(.blue)
           .offset(x: 50)
-          
+            
           Spacer()
-          
+            
           Button(action: {}) {
             Text("Pacotes")
               .font(.custom("Avenir Medium", size: 17))
@@ -47,28 +47,14 @@ struct ContentView: View {
           .offset(x: -50)
         }
         .offset(y: -35)
-
-        List (viagens) { viagem in
-          VStack(alignment: .leading) {
-            Text(viagem.titulo)
-            Image(viagem.imagem)
-              .resizable()
-              .frame(height: 125)
-            
-            HStack {
-              Text(viagem.quantidadeDeDias)
-              Spacer()
-              Text(viagem.valor)
-            }
-          }
-        }
       }
     }
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HeaderView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    HeaderView()
+      .previewLayout(.fixed(width: 400, height: 220))
   }
 }
