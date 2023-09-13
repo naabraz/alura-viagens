@@ -29,10 +29,10 @@ struct HeaderView: View {
               .font(.custom("Avenir Medium", size: 17))
               .foregroundColor(.white)
           }
-          .frame(width: 100, height: 50)
-          .overlay(RoundedRectangle(cornerRadius: 10).stroke(.blue, lineWidth: 10))
-          .background(.blue)
-          .offset(x: 50)
+            .frame(width: 100, height: 50)
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.blue, lineWidth: 10))
+            .background(.blue)
+            .offset(x: 50)
             
           Spacer()
             
@@ -41,12 +41,12 @@ struct HeaderView: View {
               .font(.custom("Avenir Medium", size: 17))
               .foregroundColor(.white)
           }
-          .frame(width: 100, height: 50)
-          .overlay(RoundedRectangle(cornerRadius: 10).stroke(.orange, lineWidth: 10))
-          .background(.orange)
-          .offset(x: -50)
+            .frame(width: 100, height: 50)
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(.orange, lineWidth: 10))
+            .background(.orange)
+            .offset(x: -50)
         }
-        .offset(y: -35)
+          .offset(y: -35)
       }
     }
   }
