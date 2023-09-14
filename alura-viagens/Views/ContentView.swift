@@ -8,7 +8,7 @@ struct ContentView: View {
       VStack {
         HeaderView()
           .frame(width: view.size.width,
-                 height: self.horizontalSizeClass == .compact ? 240 : 340,
+                 height: self.horizontalSizeClass == .compact ? 240 : 360,
                  alignment: .top)
         List (viagens) { viagem in
           CelulaViagemView(viagem: viagem)

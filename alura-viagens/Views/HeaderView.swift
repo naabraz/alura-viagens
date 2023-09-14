@@ -11,7 +11,7 @@ struct HeaderView: View {
             .foregroundColor(Color.white)
             .font(.custom("Avenir Black",
                           size: self.horizontalSizeClass == .compact ? 20 : 30))
-            .padding(.top, 50)
+            .padding(.top, self.horizontalSizeClass == .compact ? 50 : 90)
           Text("ESPECIAL")
             .foregroundColor(Color.white)
             .font(.custom("Avenir Book",
@@ -37,7 +37,8 @@ struct HeaderView: View {
                             size: self.horizontalSizeClass == .compact ? 17 : 24))
               .foregroundColor(.white)
           }
-            .frame(width: 100, height: 50)
+            .frame(width: self.horizontalSizeClass == .compact ? 100 : 150,
+                   height: self.horizontalSizeClass == .compact ? 50 : 75)
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(.blue, lineWidth: 10))
             .background(.blue)
             .offset(x: self.horizontalSizeClass == .compact ? 50 : view.size.width / 4)
@@ -50,12 +51,13 @@ struct HeaderView: View {
                             size: self.horizontalSizeClass == .compact ? 17 : 24))
               .foregroundColor(.white)
           }
-            .frame(width: 100, height: 50)
+          .frame(width: self.horizontalSizeClass == .compact ? 100 : 150,
+                 height: self.horizontalSizeClass == .compact ? 50 : 75)
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(.orange, lineWidth: 10))
             .background(.orange)
             .offset(x: self.horizontalSizeClass == .compact ? -50 : -view.size.width / 4)
         }
-          .offset(y: -35)
+        .offset(y: self.horizontalSizeClass == .compact ? -35 : -47.5)
       }
     }
   }
@@ -63,7 +65,14 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
   static var previews: some View {
-    HeaderView()
-      .previewLayout(.fixed(width: 400, height: 220))
+    Group {
+      HeaderView()
+        .environment(\.horizontalSizeClass, .compact)
+        .previewLayout(.fixed(width: 400, height: 240))
+      
+      HeaderView()
+        .environment(\.horizontalSizeClass, .compact)
+        .previewLayout(.fixed(width: 835, height: 310))
+    }
   }
 }
