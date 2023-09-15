@@ -4,17 +4,23 @@ struct ContentView: View {
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
   var body: some View {
-    GeometryReader { view in
-      VStack {
-        HeaderView()
-          .frame(width: view.size.width,
-                 height: self.horizontalSizeClass == .compact ? 240 : 360,
-                 alignment: .top)
-        List (viagens) { viagem in
-          CelulaViagemView(viagem: viagem)
+    NavigationView {
+      GeometryReader { view in
+        VStack {
+          HeaderView()
+            .frame(width: view.size.width,
+                   height: self.horizontalSizeClass == .compact ? 240 : 360,
+                   alignment: .top)
+          List (viagens) { viagem in
+            NavigationLink(destination: MapaView(coordenada: viagem.localizacao)
+              .navigationTitle("Localização")) {
+              CelulaViagemView(viagem: viagem)
+            }
+          }
+          .navigationTitle("")
         }
       }
-    }
+    }.navigationViewStyle(StackNavigationViewStyle())
   }
 }
 
